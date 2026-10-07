@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Campus TgMaster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="auth" id="auth" hidden>
+  <form class="auth-box" id="login-form" autocomplete="on">
+    <div class="brand">
+      <div class="brand-mark">TG</div>
+      <div><b>Campus TgMaster</b><span>TgMaster University</span></div>
+    </div>
+    <div><h1>Connexion étudiant</h1><p>Utilisez le matricule et le mot de passe remis par l'administration.</p></div>
+    <div class="msg err" id="login-err" hidden></div>
+    <div class="field"><label for="login-mat">Matricule</label><input id="login-mat" name="username" autocomplete="username" required autocapitalize="characters"></div>
+    <div class="field"><label for="login-pw">Mot de passe</label><input id="login-pw" name="password" type="password" autocomplete="current-password" required></div>
+    <button class="btn primary" type="submit" id="login-btn">Se connecter</button>
+    <a class="note-sample" href="admin.html">Espace administrateur</a>
+  </form>
+</div>
+
+<div class="shell" id="shell" hidden>
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">TG</div>
+      <div><b>Campus TgMaster</b><span>TgMaster University</span></div>
+    </div>
+    <nav class="nav" aria-label="Navigation principale">
+      <button id="nav-catalogue" data-view="catalogue">Catalogue</button>
+      <button id="nav-dashboard" data-view="dashboard">Ma progression <span class="mono" id="nav-count"></span></button>
+      <button id="nav-account" data-view="account">Mon compte</button>
+    </nav>
+    <div class="me who">
+      <b id="who-name"></b>
+      <span class="mono" id="who-mat"></span>
+      <button class="link" id="logout">Se déconnecter</button>
+    </div>
+  </aside>
+  <main class="main"><div class="wrap" id="app"></div></main>
+</div>
+
+<script src="assets/student.js"></script>
+</body>
+</html>

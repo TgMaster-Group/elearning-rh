@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Administration · Campus TgMaster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="auth" id="auth" hidden>
+  <form class="auth-box" id="auth-form" autocomplete="on">
+    <div class="brand">
+      <div class="brand-mark">TG</div>
+      <div><b>Campus TgMaster</b><span>Espace administrateur</span></div>
+    </div>
+    <div><h1 id="auth-title">Connexion administrateur</h1><p id="auth-text">Réservé à la direction pédagogique.</p></div>
+    <div class="msg err" id="auth-err" hidden></div>
+    <div class="field"><label for="a-user">Identifiant</label><input id="a-user" name="username" autocomplete="username" required></div>
+    <div class="field"><label for="a-pw">Mot de passe</label><input id="a-pw" name="password" type="password" autocomplete="current-password" required><small id="a-pw-help" hidden>10 caractères au minimum. Notez-le : il n'existe pas de récupération automatique.</small></div>
+    <button class="btn primary" type="submit" id="auth-btn">Se connecter</button>
+    <a class="note-sample" href="index.html">Espace étudiant</a>
+  </form>
+</div>
+
+<div class="shell" id="shell" hidden>
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">TG</div>
+      <div><b>Campus TgMaster</b><span>Espace administrateur</span></div>
+    </div>
+    <nav class="nav" aria-label="Navigation administrateur">
+      <button data-view="students">Étudiants <span class="mono" id="n-students"></span></button>
+      <button data-view="results">Résultats des quiz <span class="mono" id="n-results"></span></button>
+      <button data-view="create">Créer des comptes</button>
+      <button data-view="settings">Paramètres</button>
+    </nav>
+    <div class="me who">
+      <button class="link" id="refresh">Actualiser les données</button>
+      <button class="link" id="logout">Se déconnecter</button>
+    </div>
+  </aside>
+  <main class="main"><div class="wrap" id="app"></div></main>
+</div>
+
+<script src="assets/admin.js"></script>
+</body>
+</html>
