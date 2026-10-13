@@ -15,5 +15,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftps1.us.freehostia.com
-        username: sylvere_eressourcehumaine.tgmaster.com
+        username: sylvere_eressourcehumaine_tgmaster.com
         password: sylvere_eressourcehumainetgmaster123
